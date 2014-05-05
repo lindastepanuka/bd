@@ -1,0 +1,4 @@
+-r turnip/rspec
+
+RSpec.configure { |c| c.include Steps }
+
