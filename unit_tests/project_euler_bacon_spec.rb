@@ -1,11 +1,27 @@
-require './project_euler.rb'
+require './testable.rb'
 require 'bacon'
 
-describe ProjectEuler1, "calculation" do
+describe TestableClass1, "calculation" do
   before do
-    @problem = ProjectEuler1.new
-    @problem.divisor_1 = 3
-    @problem.divisor_2 = 5
+    @problem = TestableClass1.new
+  end
+
+  it "returns correct value for 10" do
+    @problem.calculate(10).should.equal 10
+  end
+
+  it "returns correct value for 100" do
+    @problem.calculate(100).should.equal 100
+  end
+
+  it "returns correct value for 10" do
+    @problem.calculate(10).should.not.equal 100
+  end
+end
+
+describe TestableClass2, "calculation" do
+  before do
+    @problem = TestableClass2.new(3,5)
   end
 
   it "returns correct values for 10" do
@@ -19,11 +35,15 @@ describe ProjectEuler1, "calculation" do
   it "returns correct values for 1000" do
     @problem.calculate(1000).should.equal 233168
   end
+
+  it "returns correct values for 10" do
+    @problem.calculate(10).should.not.equal 24
+  end
 end
 
-describe ProjectEuler6, "calculation" do
+describe TestableClass3, "calculation" do
   before do
-    @problem = ProjectEuler6.new
+    @problem = TestableClass3.new
   end
 
   it "returns correct value for 10" do
@@ -32,5 +52,27 @@ describe ProjectEuler6, "calculation" do
 
   it "returns correct value for 100" do
     @problem.calculate(100).should.equal 25164150
+  end
+
+  it "returns correct value for 10" do
+    @problem.calculate(10).should.not.equal 2641
+  end
+end
+
+describe TestableClass4, "calculation" do
+  before do
+    @problem = TestableClass4.new
+  end
+
+  it "returns correct value for 10" do
+    @problem.calculate(10).should.equal 55
+  end
+
+  it "returns correct value for 100" do
+    @problem.calculate(20).should.equal 6765
+  end
+
+  it "returns correct value for 10" do
+    @problem.calculate(10).should.not.equal 56
   end
 end

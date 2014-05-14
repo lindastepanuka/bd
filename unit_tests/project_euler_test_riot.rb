@@ -1,24 +1,43 @@
 require 'riot'
-require './project_euler.rb'
+require './testable.rb'
 
-context "ProjectEuler1" do
+context "TestableClass1" do
   setup do
-    @problem = ProjectEuler1.new
-    @problem.divisor_1 = 3
-    @problem.divisor_2 = 5
-    @problem
+    TestableClass1.new
+  end
+
+  asserts("values for 10")  { topic.calculate(10) }.equals(10)
+  asserts("values for 100") { topic.calculate(100) }.equals(100)
+  denies("values for 10")   { topic.calculate(10) }.equals(100)
+end
+
+context "TestableClass2" do
+  setup do
+    TestableClass2.new(3,5)
   end
 
   asserts("values for 10") { topic.calculate(10) }.equals(23)
   asserts("values for 100") { topic.calculate(100) }.equals(2318)
   asserts("values for 1000") { topic.calculate(1000) }.equals(233168)
+  denies("values for 10")   { topic.calculate(10) }.equals(24)
 end
 
-context "ProjectEuler6" do
+context "TestableClass3" do
   setup do
-    ProjectEuler6.new
+    TestableClass3.new
   end
 
   asserts("values for 10") { topic.calculate(10) }.equals(2640)
   asserts("values for 100") { topic.calculate(100) }.equals(25164150)
+  denies("values for 10")   { topic.calculate(10) }.equals(2641)
+end
+
+context "TestableClass4" do
+  setup do
+    TestableClass4.new
+  end
+
+  asserts("values for 10") { topic.calculate(10) }.equals(55)
+  asserts("values for 20") { topic.calculate(20) }.equals(6765)
+  denies("values for 10")   { topic.calculate(10) }.equals(56)
 end
