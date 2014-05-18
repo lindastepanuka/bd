@@ -1,0 +1,6 @@
+<h2>Result</h2>
+
+<%= ["You tested", @problem.class.name, "with the n as", @calculation_value].join(" ") %>.
+<%= ["The result is:", @result].join(" ") %>.
+
+<%= link_to 'Test again!', new_calculation_testable_class_index_path %>

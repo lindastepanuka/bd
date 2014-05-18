@@ -1,0 +1,2 @@
+module TestableClass1Helper
+end

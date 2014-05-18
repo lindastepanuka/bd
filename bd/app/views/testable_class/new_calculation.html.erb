@@ -1,0 +1,12 @@
+<h2>Calculate value in a testable class</h2>
+<%= form_for "testable", url: :calculate_testable_class_index, method: :post do |f| %>
+  <p>
+    <%= f.label :testable_class %>
+    <%= f.select :testable_class, [TestableClass1, TestableClass2, TestableClass3, TestableClass4] %>
+    <%= f.label :calculation_value %>
+    <%= f.text_field :calculation_value %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
