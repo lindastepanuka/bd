@@ -28,8 +28,8 @@ gem 'spring',        group: :development
 
 group :development, :test do
   gem 'rspec-rails'
-  gem "watir-rspec"
-  gem "watir-rails"
+  # gem "watir-rspec"
+  # gem "watir-rails"
 end
 
 gem 'capybara'
