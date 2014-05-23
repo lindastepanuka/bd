@@ -34,6 +34,10 @@ group :development, :test do
   gem 'watir-rails'
 
   gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'selenium-webdriver'
+  gem 'poltergeist'
+
 
   gem 'webrat'
 end
