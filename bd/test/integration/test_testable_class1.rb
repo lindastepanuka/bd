@@ -27,10 +27,10 @@ class TestableClass1WatirTest < ActionDispatch::IntegrationTest
   def test_false_return_value_with_10
     @browser.goto new_calculation_testable_class_index_path
     assert @browser.text.include?("Calculate value in a testable class")
-    @browser.text_field(label: "Calculation value").set "100"
+    @browser.text_field(label: "Calculation value").set "10"
     @browser.select_list(label: "Testable class").select "TestableClass1"
     @browser.button(value: "Save Testable").click
-    assert_not @browser.text.include?("You tested TestableClass1 with the n as 100. The result is: 100.")
+    assert_not @browser.text.include?("You tested TestableClass1 with the n as 10. The result is: 100.")
   end
 
   def teardown
