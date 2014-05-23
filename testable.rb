@@ -5,8 +5,7 @@ class TestableClass1
 end
 
 class TestableClass2
-  attr_accessor :divisor_1
-  attr_accessor :divisor_2
+  attr_accessor :divisor_1, :divisor_2
 
   def initialize(div1=3, div2=5)
     divisor_1 = div1

@@ -12,10 +12,6 @@ Feature: Test TestableClass1
     Given I have testable class 1
     Then I have its method value of 100 as 100
 
-  Scenario: With 1000
-    Given I have testable class 1
-    Then I have its method value of 1000 as 1000
-
   Scenario: With 10 failing
     Given I have testable class 1
     Then I don't have its method value of 10 as 100

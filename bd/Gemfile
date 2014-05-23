@@ -28,11 +28,15 @@ gem 'spring',        group: :development
 
 group :development, :test do
   gem 'rspec-rails'
-  # gem "watir-rspec"
-  # gem "watir-rails"
-end
 
-gem 'capybara'
+  gem 'watir'
+
+  gem 'watir-rails'
+
+  gem 'capybara'
+
+  gem 'webrat'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -45,4 +49,3 @@ gem 'capybara'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
