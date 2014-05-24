@@ -13,7 +13,10 @@ class TestableClass2
   end
 
   def calculate(n)
-    (0..(n-1)).to_a.select{ |i| i.modulo(divisor_1 || 3) == 0 || i.modulo(divisor_2 || 5) == 0 }.inject(:+)
+    a = (0..(n-1)).to_a.select do |i|
+      i.modulo(divisor_1 || 3) == 0 || i.modulo(divisor_2 || 5) == 0
+    end
+    a.inject(:+)
   end
 end
 

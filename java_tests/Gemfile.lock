@@ -1,0 +1,59 @@
+GIT
+  remote: git://github.com/rspec/rspec-core.git
+  revision: 479c06bdda59489ecf5512ee5a8fdbdc7dfb2390
+  specs:
+    rspec-core (3.0.0.rc1)
+      rspec-support (= 3.0.0.rc1)
+
+GIT
+  remote: git://github.com/rspec/rspec-expectations.git
+  revision: 1dce0c78b1a19f0d328d9574d7b3e4201e269b3f
+  specs:
+    rspec-expectations (3.0.0.rc1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.0.0.rc1)
+
+GIT
+  remote: git://github.com/rspec/rspec-mocks.git
+  revision: 83c1456d9e9bddcb624b00f636340a837f42e6b2
+  specs:
+    rspec-mocks (3.0.0.rc1)
+      rspec-support (= 3.0.0.rc1)
+
+GIT
+  remote: git://github.com/rspec/rspec-support.git
+  revision: 6cd89ef41fff627a2d1782ffd7cf50407aef7ddd
+  specs:
+    rspec-support (3.0.0.rc1)
+
+GIT
+  remote: git://github.com/rspec/rspec.git
+  revision: 1ab8cc5f3e92304fa4d67a6d3d79ada70fcc6208
+  specs:
+    rspec (3.0.0.rc1)
+      rspec-core (= 3.0.0.rc1)
+      rspec-expectations (= 3.0.0.rc1)
+      rspec-mocks (= 3.0.0.rc1)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    bacon (1.2.0)
+    diff-lcs (1.2.5)
+    minitest (5.3.4)
+    riot (0.12.7)
+      rr
+    rr (1.1.2)
+
+PLATFORMS
+  java
+
+DEPENDENCIES
+  bacon
+  minitest
+  riot
+  rspec!
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-support!
